@@ -4,5 +4,6 @@ import net.fabricmc.api.ClientModInitializer
 
 class CobblemonThingsClient: ClientModInitializer{
     override fun onInitializeClient() {
+        PokemonUseWaystone.InitializePokemonInteractionWatcher()
     }
 }

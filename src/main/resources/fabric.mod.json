@@ -3,13 +3,13 @@
 	"id": "cobblemon-things",
 	"version": "${version}",
 	"name": "Cobblemon Things",
-	"description": "Some Cobblemon things",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
 	],
 	"contact": {
-		"homepage": "https://cobblemonthings.cafezinhu.com/",
-		"sources": "https://github.com/Cafezinhu/cobblemon-things"
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/cobblemon-things/icon.png",
@@ -28,7 +28,10 @@
 			}
 		],
 		"client": [
-			"com.cafezinhu.cobblemonthings.CobblemonThingsClient"
+			{
+				"value": "com.cafezinhu.cobblemonthings.CobblemonThingsClient",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [

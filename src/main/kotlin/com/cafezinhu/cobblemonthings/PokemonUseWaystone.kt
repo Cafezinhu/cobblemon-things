@@ -7,7 +7,9 @@ import org.joml.Vector3f
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.cobblemon.mod.common.util.playSoundServer
 import net.minecraft.server.level.ServerLevel
+import net.minecraft.sounds.SoundEvent
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.entity.EntityTypeTest
 
@@ -41,6 +43,7 @@ class PokemonUseWaystone {
                         println(respawn != null)
                         if(player != null && respawn != null && level != null){
                             player.teleportTo(level, respawn.x, respawn.y, respawn.z, 0F, 0F)
+                            level.playSoundServer(respawn, SoundEvent.createFixedRangeEvent(ResourceLocation("entity.enderman.teleport"), 10F))
                         }
                     }
                 })
